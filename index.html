@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashlin R Rinthika | Futuristic AI & Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Ashlin R Rinthika - B.Tech AI & Data Science student, Generative AI developer, Python & Web Specialist with CGPA 9.17.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Custom Cursor Glow -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Smooth Page Loading Screen -->
+  <div class="preloader" id="preloader">
+    <div class="loader-content">
+      <div class="loader-ring">
+        <div class="loader-core"></div>
+      </div>
+      <div class="loader-text">
+        <span class="brand-glow">ASHLIN.AI</span>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Particle Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Sticky Glass Navigation Header -->
+  <header class="glass-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-code">&lt;</span>
+        <span class="brand-name">Ashlin</span>
+        <span class="brand-dot">.</span>
+        <span class="brand-tag">AI</span>
+        <span class="brand-code">&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-microchip"></i> Skills</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-glass-nav magnetic-btn" id="openResumeBtn">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </button>
+        <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-text-content reveal-item">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">AI & Data Science Specialist</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text glow-text">Ashlin R Rinthika</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            Crafting <span class="txt-rotate" data-period="2000" data-rotate='[ "Generative AI Systems", "Data Science Models", "Full-Stack Web Apps", "Predictive Analytics" ]'></span>
+          </h2>
+
+          <p class="hero-description">
+            B.Tech AI & Data Science scholar with <strong>CGPA 9.17</strong>. Specializing in Python, C++, SQL, Generative AI models, and intuitive interactive web applications.
+          </p>
+
+          <!-- Magnetic Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary magnetic-btn ripple-btn">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn ripple-btn">
+              <span>Get in Touch</span>
+              <i class="fa-solid fa-comments"></i>
+            </a>
+            <button class="btn btn-outline magnetic-btn ripple-btn" id="quickCVBtn">
+              <i class="fa-solid fa-eye"></i> Quick View CV
+            </button>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/AshlinRRinthika" target="_blank" class="social-icon" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/ashlin-r-rinthika-9ba428326" target="_blank" class="social-icon" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:ashlinrrinthika@gmail.com" class="social-icon" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+917094422729" class="social-icon" title="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Floating Card / Avatar -->
+        <div class="hero-visual reveal-item delay-200">
+          <div class="avatar-card-wrapper parallax-element">
+            <div class="avatar-glass-card tilt-card">
+              <div class="avatar-glow-ring"></div>
+              <div class="avatar-img-container">
+                <img src="./assets/hero_avatar.jpg" alt="Ashlin R Rinthika Profile" class="avatar-img floating-avatar">
+              </div>
+              <div class="avatar-status-badge">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="status-info">
+                  <span class="status-title">RVS Technical Campus</span>
+                  <span class="status-sub">CGPA 9.17 • 2023-2027</span>
+                </div>
+              </div>
+              <div class="floating-tech-chip chip-1">
+                <i class="fa-brands fa-python"></i> Python
+              </div>
+              <div class="floating-tech-chip chip-2">
+                <i class="fa-solid fa-brain"></i> GenAI & OpenAI
+              </div>
+              <div class="floating-tech-chip chip-3">
+                <i class="fa-solid fa-database"></i> SQL & Data Science
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bouncing Scroll Down Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to explore</span>
+        <i class="fa-solid fa-chevron-down bounce-arrow"></i>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="section-container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag"><i class="fa-solid fa-address-card"></i> About Me</span>
+          <h2 class="section-title">Driven by Curiosity &amp; <span class="gradient-text">AI Innovation</span></h2>
+          <p class="section-subtitle">A glimpse into my academic record, technical summary, certifications, and leadership roles.</p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Summary & Details Box -->
+          <div class="about-card glass-card reveal-item tilt-card">
+            <h3 class="card-title"><i class="fa-solid fa-user-astronaut"></i> Professional Profile</h3>
+            <p class="about-text line-fade">
+              Highly motivated <strong>B.Tech Artificial Intelligence and Data Science</strong> student at <strong>RVS Technical Campus, Coimbatore</strong> (2023–2027) with an outstanding academic record of <strong>CGPA 9.17</strong>.
+            </p>
+            <p class="about-text line-fade">
+              Proficient in building Machine Learning models, Generative AI integrations, Data Analysis pipeline scripts, SQL database management, and modern responsive front-end user interfaces.
+            </p>
+
+            <div class="info-meta-list">
+              <div class="meta-item"><i class="fa-solid fa-location-dot"></i> <span>Coimbatore, Tamil Nadu, India</span></div>
+              <div class="meta-item"><i class="fa-solid fa-envelope"></i> <span>ashlinrrinthika@gmail.com</span></div>
+              <div class="meta-item"><i class="fa-solid fa-phone"></i> <span>+91 70944 22729</span></div>
+              <div class="meta-item"><i class="fa-solid fa-award"></i> <span>Rotaract Board Member &amp; Event Chair</span></div>
+            </div>
+
+            <!-- Languages Spoken -->
+            <div class="languages-group">
+              <h4 class="sub-heading"><i class="fa-solid fa-language"></i> Multilingual Proficiency</h4>
+              <div class="lang-pills">
+                <span class="lang-pill"><span class="lang-flag">🇬🇧</span> English</span>
+                <span class="lang-pill"><span class="lang-flag">🇮🇳</span> Tamil</span>
+                <span class="lang-pill"><span class="lang-flag">🌴</span> Malayalam</span>
+                <span class="lang-pill"><span class="lang-flag">🇫🇷</span> French</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Counter Stats & Milestones -->
+          <div class="stats-column">
+            
+            <div class="stats-grid">
+              <div class="stat-card glass-card reveal-item tilt-card">
+                <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-number" data-target="9.17" data-decimal="2">0</div>
+                <div class="stat-label">Academic CGPA</div>
+              </div>
+
+              <div class="stat-card glass-card reveal-item tilt-card delay-100">
+                <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="stat-number" data-target="10">0</div>
+                <div class="stat-label">Projects & Prototypes</div>
+              </div>
+
+              <div class="stat-card glass-card reveal-item tilt-card delay-200">
+                <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Certifications & Workshops</div>
+              </div>
+
+              <div class="stat-card glass-card reveal-item tilt-card delay-300">
+                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Leadership Roles</div>
+              </div>
+            </div>
+
+            <!-- Education & Certifications Timeline -->
+            <div class="timeline-box glass-card reveal-item">
+              <h3 class="card-title"><i class="fa-solid fa-graduation-cap"></i> Education &amp; Certifications</h3>
+              <div class="timeline">
+                
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">2023 - 2027</span>
+                    <h4 class="timeline-title">B.Tech Artificial Intelligence &amp; Data Science</h4>
+                    <p class="timeline-org">RVS Technical Campus, Coimbatore</p>
+                    <span class="gpa-badge"><i class="fa-solid fa-trophy"></i> CGPA: 9.17</span>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Workshop Certification</span>
+                    <h4 class="timeline-title">TECHGYAN Generative AI Workshop</h4>
+                    <p class="timeline-org">NIT Tiruchirappalli</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Infosys Springboard</span>
+                    <h4 class="timeline-title">SSCP: Operating Network-Based Security Services</h4>
+                    <p class="timeline-org">Infosys Certified Security Training</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="section-container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Featured Portfolio</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">Project Prototypes</span></h2>
+          <p class="section-subtitle">Explore live interactive cards featuring 3D perspective hover, glassmorphism UI, and detailed interactive preview modals.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: QR Attendance System -->
+          <div class="project-card glass-card reveal-item tilt-card" data-project="qr-attendance">
+            <div class="project-img-wrapper">
+              <img src="./assets/qr_attendance.jpg" alt="QR-Based Attendance System" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-glass open-project-modal" data-project="qr-attendance">
+                  <i class="fa-solid fa-expand"></i> View Live Demo
+                </button>
+              </div>
+              <span class="project-category-badge">Web &amp; Security</span>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">QR-Based Attendance Management System</h3>
+              <p class="project-description">
+                Faculty attendance tracking and management with secure QR access generation, scanner authentication, and automated time-logging records.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML/CSS</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-solid fa-qrcode"></i> QR Code API</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> Local Storage / SQL</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-text open-project-modal" data-project="qr-attendance">
+                  <span>Explore Architecture</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/AshlinRRinthika" target="_blank" class="github-link" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: CAPTCHA Generation System -->
+          <div class="project-card glass-card reveal-item tilt-card delay-100" data-project="captcha-system">
+            <div class="project-img-wrapper">
+              <img src="./assets/captcha_system.jpg" alt="CAPTCHA Generation System" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-glass open-project-modal" data-project="captcha-system">
+                  <i class="fa-solid fa-expand"></i> View Live Demo
+                </button>
+              </div>
+              <span class="project-category-badge">Security &amp; Voice AI</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">CAPTCHA Generation &amp; Voice Assistance System</h3>
+              <p class="project-description">
+                Dynamic visual CAPTCHA generation engine featuring real-time input validation, audio voice readout assistance, and anti-bot verification logic.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JS Speech Synthesis</span>
+                <span class="tech-tag"><i class="fa-solid fa-shield-halved"></i> Security Canvas</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-text open-project-modal" data-project="captcha-system">
+                  <span>Test Generator</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/AshlinRRinthika" target="_blank" class="github-link" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: GenAI Prompt & Workflow Suite -->
+          <div class="project-card glass-card reveal-item tilt-card delay-200" data-project="genai-suite">
+            <div class="project-img-wrapper">
+              <div class="project-placeholder-visual genai-bg">
+                <div class="visual-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="visual-text">GenAI Prompt Suite</div>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-glass open-project-modal" data-project="genai-suite">
+                  <i class="fa-solid fa-expand"></i> View Live Demo
+                </button>
+              </div>
+              <span class="project-category-badge">Generative AI</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Generative AI Workshop &amp; Prompt Orchestrator</h3>
+              <p class="project-description">
+                AI workflow prototype leveraging OpenAI models, Digri.ai, Napkin AI, and Gamma AI for automated content summarization and visual diagram creation.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fa-solid fa-robot"></i> OpenAI API</span>
+                <span class="tech-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> GenAI Tools</span>
+                <span class="tech-tag"><i class="fa-solid fa-bolt"></i> Streamlit/Web</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-text open-project-modal" data-project="genai-suite">
+                  <span>View Details</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/AshlinRRinthika" target="_blank" class="github-link" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Data Science Analytics & Visualization -->
+          <div class="project-card glass-card reveal-item tilt-card delay-300" data-project="data-analytics">
+            <div class="project-img-wrapper">
+              <div class="project-placeholder-visual ds-bg">
+                <div class="visual-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="visual-text">Data Analytics Suite</div>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-glass open-project-modal" data-project="data-analytics">
+                  <i class="fa-solid fa-expand"></i> View Live Demo
+                </button>
+              </div>
+              <span class="project-category-badge">Data Science</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Data Analytics &amp; Statistical Visualization</h3>
+              <p class="project-description">
+                Interactive exploratory data analysis tools, statistical Matplotlib plotting scripts, and SQL query automation for data insights.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag"><i class="fa-solid fa-chart-pie"></i> Matplotlib</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> SQL Queries</span>
+                <span class="tech-tag"><i class="fa-solid fa-square-root-variable"></i> NumPy/Pandas</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-text open-project-modal" data-project="data-analytics">
+                  <span>View Charts</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/AshlinRRinthika" target="_blank" class="github-link" title="GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="section-container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag"><i class="fa-solid fa-sliders"></i> Technical Proficiency</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Tool Ecosystem</span></h2>
+          <p class="section-subtitle">Smooth animated skill bars, circular meters, and interactive glass tool badges.</p>
+        </div>
+
+        <div class="skills-wrapper">
+          
+          <!-- Animated Progress Bars -->
+          <div class="skills-column glass-card reveal-item">
+            <h3 class="card-title"><i class="fa-solid fa-code"></i> Programming &amp; Frameworks</h3>
+            
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="95%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-brain"></i> Generative AI &amp; OpenAI APIs</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-brands fa-html5"></i> Web Development (HTML, CSS, JS)</span>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="92%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-database"></i> SQL &amp; Database Management</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="88%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-c"></i> C++ Programming</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-chart-line"></i> Matplotlib &amp; Data Science</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="85%"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Circular SVG Progress Indicators & Tools Grid -->
+          <div class="skills-column">
+            
+            <div class="circles-card glass-card reveal-item">
+              <h3 class="card-title"><i class="fa-solid fa-bullseye"></i> Domain Specialization</h3>
+              
+              <div class="circles-grid">
+                
+                <div class="circle-item">
+                  <div class="circle-progress" data-percent="92">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" class="circle-bg"></circle>
+                      <circle cx="50" cy="50" r="40" class="circle-bar" style="stroke-dashoffset: 251.2;"></circle>
+                    </svg>
+                    <div class="circle-text">92%</div>
+                  </div>
+                  <span class="circle-label">Artificial Intelligence</span>
+                </div>
+
+                <div class="circle-item">
+                  <div class="circle-progress" data-percent="88">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" class="circle-bg"></circle>
+                      <circle cx="50" cy="50" r="40" class="circle-bar" style="stroke-dashoffset: 251.2;"></circle>
+                    </svg>
+                    <div class="circle-text">88%</div>
+                  </div>
+                  <span class="circle-label">Data Science</span>
+                </div>
+
+                <div class="circle-item">
+                  <div class="circle-progress" data-percent="90">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" class="circle-bg"></circle>
+                      <circle cx="50" cy="50" r="40" class="circle-bar" style="stroke-dashoffset: 251.2;"></circle>
+                    </svg>
+                    <div class="circle-text">90%</div>
+                  </div>
+                  <span class="circle-label">Generative AI</span>
+                </div>
+
+                <div class="circle-item">
+                  <div class="circle-progress" data-percent="86">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" class="circle-bg"></circle>
+                      <circle cx="50" cy="50" r="40" class="circle-bar" style="stroke-dashoffset: 251.2;"></circle>
+                    </svg>
+                    <div class="circle-text">86%</div>
+                  </div>
+                  <span class="circle-label">Web Dev &amp; Security</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Software Tools Badges -->
+            <div class="tools-card glass-card reveal-item delay-100">
+              <h3 class="card-title"><i class="fa-solid fa-toolbox"></i> Developer Tools &amp; Platforms</h3>
+              <div class="tools-grid">
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-code"></i> VS Code</div>
+                <div class="tool-badge tilt-card"><i class="fa-brands fa-github"></i> GitHub</div>
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-robot"></i> OpenAI API</div>
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-cubes"></i> Digri.ai</div>
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-wand-magic"></i> Gamma AI</div>
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-pen-ruler"></i> Napkin AI</div>
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-palette"></i> Canva</div>
+                <div class="tool-badge tilt-card"><i class="fa-solid fa-terminal"></i> CodeChef</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="section-container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Connect &amp; <span class="gradient-text">Collaborate</span></h2>
+          <p class="section-subtitle">Seeking internships in AI/ML, Data Science, Python, or Web Development. Feel free to reach out!</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Direct Info -->
+          <div class="contact-info-column glass-card reveal-item tilt-card">
+            <h3 class="card-title"><i class="fa-solid fa-address-book"></i> Direct Contact Info</h3>
+            <p class="contact-intro">
+              I am actively seeking internship opportunities and open-source research projects in Artificial Intelligence and Data Science.
+            </p>
+
+            <div class="contact-info-cards">
+              
+              <a href="mailto:ashlinrrinthika@gmail.com" class="info-box-link">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-details">
+                  <span class="info-title">Email Address</span>
+                  <span class="info-value">ashlinrrinthika@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+917094422729" class="info-box-link">
+                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-details">
+                  <span class="info-title">Phone Number</span>
+                  <span class="info-value">+91 70944 22729</span>
+                </div>
+              </a>
+
+              <div class="info-box-link">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-details">
+                  <span class="info-title">Location</span>
+                  <span class="info-value">Coimbatore, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <a href="https://linkedin.com/in/ashlin-r-rinthika-9ba428326" target="_blank" class="info-box-link">
+                <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="info-details">
+                  <span class="info-title">LinkedIn Profile</span>
+                  <span class="info-value">linkedin.com/in/ashlin-r-rinthika</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <div class="contact-form-column glass-card reveal-item delay-100">
+            <h3 class="card-title"><i class="fa-solid fa-message"></i> Send Me a Message</h3>
+            
+            <form id="contactForm" class="contact-form">
+              
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="name" required placeholder="e.g. Sarah Jenkins" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="email" required placeholder="sarah@example.com" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-heading input-icon"></i>
+                  <input type="text" id="subject" required placeholder="Internship Opportunity / Inquiry" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-comment-dots input-icon message-icon"></i>
+                  <textarea id="message" rows="4" required placeholder="Hi Ashlin, I would love to connect with you regarding..." class="form-input form-textarea"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full magnetic-btn ripple-btn" id="submitBtn">
+                <span id="submitBtnText">Send Message</span>
+                <i class="fa-solid fa-paper-plane" id="submitBtnIcon"></i>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="glass-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-code">&lt;</span>
+          <span class="brand-name">Ashlin</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-tag">AI</span>
+          <span class="brand-code">&gt;</span>
+        </a>
+        <p class="footer-copy">Designed &amp; Built by <strong>Ashlin R Rinthika</strong>. B.Tech AI &amp; Data Science.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE PROJECT MODAL -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-container glass-card">
+      <button class="modal-close" id="closeProjectModal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-category-badge" id="modalCategory">Category</span>
+        <h2 class="modal-title" id="modalTitle">Project Title</h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-preview-box" id="modalPreviewBox">
+          <!-- Dynamic live interactive preview inserted via JS -->
+        </div>
+
+        <div class="modal-info-section">
+          <h3><i class="fa-solid fa-circle-info"></i> Project Overview</h3>
+          <p id="modalDescription">Detailed explanation...</p>
+
+          <h3><i class="fa-solid fa-list-check"></i> Key Features</h3>
+          <ul class="modal-features-list" id="modalFeatures">
+            <!-- Features list dynamically rendered -->
+          </ul>
+
+          <h3><i class="fa-solid fa-layer-group"></i> Technologies &amp; Architecture</h3>
+          <div class="project-tech-tags" id="modalTechStack">
+            <!-- Tech badges dynamically rendered -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-container glass-card resume-modal-card">
+      <button class="modal-close" id="closeResumeModal">&times;</button>
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fa-solid fa-file-contract"></i> Ashlin R Rinthika — Curriculum Vitae</h2>
+        <span class="modal-subtitle">B.Tech Artificial Intelligence and Data Science | CGPA 9.17</span>
+      </div>
+
+      <div class="modal-body resume-body">
+        <div class="resume-sheet">
+          <div class="resume-header">
+            <h1>ASHLIN R RINTHIKA</h1>
+            <p>Coimbatore, Tamil Nadu, India • +91 70944 22729 • ashlinrrinthika@gmail.com</p>
+            <p>LinkedIn: linkedin.com/in/ashlin-r-rinthika-9ba428326 | GitHub: github.com/AshlinRRinthika</p>
+          </div>
+
+          <div class="resume-section">
+            <h3>Professional Summary</h3>
+            <p>Highly motivated B.Tech student specializing in Artificial Intelligence and Data Science with CGPA 9.17. Proficient in Python, C++, SQL, Generative AI and web development. Seeking internships in AI/ML, Data Science, Python or Web Development.</p>
+          </div>
+
+          <div class="resume-section">
+            <h3>Education</h3>
+            <p><strong>RVS Technical Campus, Coimbatore</strong> — B.Tech Artificial Intelligence and Data Science (2023–2027) | <strong>CGPA: 9.17</strong></p>
+          </div>
+
+          <div class="resume-section">
+            <h3>Technical Skills</h3>
+            <p><strong>Languages & Core:</strong> Python, C++, SQL, HTML, CSS, JavaScript</p>
+            <p><strong>AI & Data Science:</strong> Generative AI, OpenAI APIs, Matplotlib, Data Structures & Algorithms</p>
+            <p><strong>Tools & Platforms:</strong> VS Code, GitHub, CodeChef, Digri.ai, Gamma AI, Napkin AI, Canva</p>
+          </div>
+
+          <div class="resume-section">
+            <h3>Projects</h3>
+            <ul>
+              <li><strong>QR-Based Attendance Management System:</strong> Faculty attendance management with QR access and authentication.</li>
+              <li><strong>CAPTCHA Generation System:</strong> CAPTCHA generation, validation and voice assistance using HTML, CSS and JavaScript.</li>
+            </ul>
+          </div>
+
+          <div class="resume-section">
+            <h3>Certifications</h3>
+            <ul>
+              <li>TECHGYAN Generative AI Workshop – NIT Tiruchirappalli</li>
+              <li>Infosys Springboard – SSCP: Operating Network-Based Security Services</li>
+            </ul>
+          </div>
+
+          <div class="resume-section">
+            <h3>Achievements & Leadership</h3>
+            <ul>
+              <li>Academic Distinction: CGPA 9.17</li>
+              <li>Rotaract Board Member &amp; Event Chair for Rotaract Event</li>
+            </ul>
+          </div>
+
+          <div class="resume-section">
+            <h3>Languages</h3>
+            <p>English, Tamil, Malayalam, French</p>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button class="btn btn-primary magnetic-btn" id="printResumeBtn">
+            <i class="fa-solid fa-print"></i> Print / Download PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS NOTIFICATION MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-container glass-card success-card">
+      <div class="success-icon-wrapper">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+      </div>
+      <h2>Message Transmitted!</h2>
+      <p>Thank you for getting in touch. Ashlin will respond to your email promptly.</p>
+      <button class="btn btn-primary magnetic-btn" id="closeSuccessBtn">Done</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Module -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
